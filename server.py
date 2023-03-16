@@ -1,5 +1,5 @@
 # импортируем библиотеки
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import logging
 
 # библиотека, которая нам понадобится для работы с JSON
@@ -28,10 +28,6 @@ logging.basicConfig(level=logging.INFO)
 # Когда он откажется купить слона,
 # то мы уберем одну подсказку. Как будто что-то меняется :)
 sessionStorage = {}
-
-
-def jsonify(response):
-    pass
 
 
 @app.route('/post', methods=['POST'])
